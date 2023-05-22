@@ -1,0 +1,39 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=1in]{geometry} % 设置页面边距
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb} % 数学符号
+\usepackage{booktabs} % 绘制漂亮的表格
+\usepackage{array} % 数组和表格
+\usepackage{multirow} % 多行合并的表格
+\usepackage{caption} % 设置图片和表格的标题格式
+\usepackage{subcaption} % 多个子图或表格
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+
+\title{\textbf{光线投射实验报告}}
+\author{张立博\ 2021012487}
+\date{2023.4.10}
+
+\begin{document}
+
+\maketitle
+
+\section{代码逻辑}
+\begin{enumerate}
+    \item 使用$SceneParser$解析场景，获取场景的相机、物体组和屏幕的宽度高度
+    \item 循环屏幕中的像素，对于每个像素
+        \begin{enumerate}
+            \item 相机发射光线
+            \item 计算光线与场景物体组的交点
+            \item 如果相交，则遍历场景中所有光源使用Phong模型计算局部光强并累加，计算得到像素着色
+            \item 如果不相交，则像素使用背景色
+        \end{enumerate}
+    \item 保存渲染生成的图片
+\end{enumerate}
+
+\section{代码参考}
+未与同学进行讨论，未借鉴网上与其他同学的代码
+\end{document}

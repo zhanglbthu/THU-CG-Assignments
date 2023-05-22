@@ -1,0 +1,6 @@
+/mnt/e/重要文件/大二下/图形学/PA2_New/code/build/CMakeFiles/rebuild_cache.dir
+/mnt/e/重要文件/大二下/图形学/PA2_New/code/build/CMakeFiles/edit_cache.dir
+/mnt/e/重要文件/大二下/图形学/PA2_New/code/build/CMakeFiles/PA2.dir
+/mnt/e/重要文件/大二下/图形学/PA2_New/code/build/deps/vecmath/CMakeFiles/rebuild_cache.dir
+/mnt/e/重要文件/大二下/图形学/PA2_New/code/build/deps/vecmath/CMakeFiles/edit_cache.dir
+/mnt/e/重要文件/大二下/图形学/PA2_New/code/build/deps/vecmath/CMakeFiles/vecmath.dir

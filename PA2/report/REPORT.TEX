@@ -1,0 +1,53 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=1in]{geometry} % 设置页面边距
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb} % 数学符号
+\usepackage{booktabs} % 绘制漂亮的表格
+\usepackage{array} % 数组和表格
+\usepackage{multirow} % 多行合并的表格
+\usepackage{caption} % 设置图片和表格的标题格式
+\usepackage{subcaption} % 多个子图或表格
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+
+\title{\textbf{图形学实验PA2参数曲线和曲面}}
+\author{张立博\ 2021012487}
+\date{2023.5.1}
+
+\begin{document}
+\maketitle
+\section{曲线性质}
+\subsection{Bezier曲线和B样条曲线的主要异同}
+\subsubsection{控制点数目和位置}
+贝塞尔曲线的形状由起点和终点两个控制点和它们之间的一个或多个中间控制点共同确定。
+B样条曲线则是由一组控制点以及一个给定的阶数共同决定形状。
+\subsubsection{曲线平滑度}
+B样条曲线比贝塞尔曲线更平滑,因为其基函数是具有紧支撑的，这意味着它们的影响仅限于曲线上的一小段，
+所以更适合在编辑和变形过程中使用。
+相比之下，贝塞尔曲线使用的基函数在整个曲线上都有影响，这可能导致曲线出现更多的锐角或弯曲，
+可能会导致曲线出现不自然的形变。
+\subsubsection{计算复杂度}
+在计算上，B样条曲线需要更多的计算量来确定基函数的值和曲线的形状。相比之下，贝塞尔曲线的计算相对较简单
+\subsection{绘制一个首尾相接且接点处也有连续性质的B样条}
+\subsubsection{确定控制点}
+首先需要确定一组控制点，这些点将定义曲线的形状。这些点应该按照顺序排列，以便在绘制曲线时能够首尾相接。
+\subsubsection{确定节点向量}
+根据样条次数和控制点个数确定节点向量，指定每个控制点的影响范围。
+\subsubsection{计算基函数}
+使用递归计算方法来计算基函数。
+\subsubsection{计算曲线上的点}
+通过将控制点乘以相应的基函数系数，并将结果相加，可以计算曲线上的点。
+\subsubsection{绘制曲线}
+将计算出的曲线上的点连接起来，即可绘制出一条首尾相接且接点处也具有连续性质的B样条曲线。
+\section{代码逻辑}
+代码逻辑如下：\\
+在构造函数中，代码检查了曲线是否位于 xy 平面上，如果曲线不在 xy 平面上，则输出错误信息并退出程序。\\
+在绘制函数中，代码首先调用 Curve 类的 discretize 方法来离散化曲线，得到一系列的点和切向量。
+然后，通过对这些点和切向量进行旋转，可以构建出旋转曲面的顶点和法向量，并将其保存在 Surface 结构体中。
+最后，通过 glBegin 和 glEnd 函数以及 glVertex3fv 和 glNormal3fv 函数，绘制旋转曲面的三角面片。
+\section{代码参考}
+完成作业过程中未与同学进行讨论，未借鉴他人代码
+\end{document}

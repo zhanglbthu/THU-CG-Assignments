@@ -1,0 +1,5 @@
+*.mp4   binary  -text
+*.mov   binary  -text
+*.avi   binary  -text
+*.mkv   binary  -text
+# 添加其他视频文件类型，使用相同的格式
