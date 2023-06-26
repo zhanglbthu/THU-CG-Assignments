@@ -52,7 +52,7 @@ public:
         {
             std::vector<Vector3f> VV;
             std::vector<Vector3f> VN;
-            std::vector<Tup3u> VF;
+            std::vector<Tup3u> VF; //存储三角形面片的索引
         } surface;
 
         std::vector<CurvePoint> curvePoints;

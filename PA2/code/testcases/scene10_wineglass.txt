@@ -22,7 +22,8 @@ Background {
 
 Materials {
     numMaterials 1
-    PhongMaterial {
+    PhongMaterial 
+    {
 	  diffuseColor 1.0 1.0 0.7
 	  specularColor 1.0 1.0 1.0
 	  shininess 25
